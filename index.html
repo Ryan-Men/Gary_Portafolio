@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolio | Gary Mendoza</title>
+  <meta name="description" content="Portafolio y currículum de Tu Nombre: programación y Ventas." />
+  <meta name="theme-color" content="#0f0f0f" />
+  <meta property="og:title" content="Portafolio | Gary Mendoza" />
+  <meta property="og:description" content="Mira mi experiencia, descárgate mi CV y contáctame." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="img/favicon.webp" type="image/webp" />
+  <link rel="preload" href="img/profile.webp" as="image" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header class="nav">
+    <div class="container nav__wrap">
+      <a class="brand" href="#">Portafolio/Curriculum Vitae<span>.</span></a>
+      <nav aria-label="principal" class="menu">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#proyectos">Experiencia</a>
+        <a href="#contacto">Contacto</a>
+        <button id="themeToggle" class="btn ghost" aria-label="Cambiar tema">🌓</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero container">
+      <div class="hero__text">
+        <h1>Hola, soy <span class="accent">Gary Ryan Mendoza Quiros</span></h1>
+        <p class="lead">Programación & Ventas. Construyo paginas web/Programas/Apps, shaders y tengo mucha experiencia en Ventas.</p>
+        <div class="cta">
+          <a class="btn primary" href="docs/CV.pdf" download>📄 Descargar Curriculum Vitae</a>
+          <a class="btn" href="#proyectos">Experiencia</a>
+        </div>
+      </div>
+      <picture class="hero__media">
+        <img src="img/Foto_Perfil.png" alt="Main Foto" loading="eager" decoding="async" />
+      </picture>
+    </section>
+
+    <section id="sobre-mi" class="container section">
+      <h2>Sobre mí</h2>
+      <p>
+        Más de 11 años de experiencia en fuerza de ventas, inventarios físicos/digitales y soporte técnico de hardware y software. Desarrollador autodidacta en C++, Python, Java y Django. Experiencia en Unreal Engine, Blender y desarrollo de bots personalizados para Discord, Blender y pipelines eficientes para la web.
+      </p>
+      <ul class="badges" aria-label="Habilidades">
+        <li>C++</li>
+        <li>Unreal Engine 4/5</li>
+        <li>HTML/CSS/JS</li>
+        <li>Python</li>
+        <li>Java</li>
+        <li>Discord API</li>
+        <li>Blender</li>
+        <li>Git/GitHub</li>
+      </ul>
+    </section>
+
+    <section id="proyectos" class="container section">
+      <h2>Experiencia</h2>
+      <div class="grid">
+        <article class="card">
+          <img src="img/San_pio.png" alt="Captura del Proyecto 1" loading="lazy" decoding="async" />
+          <div class="card__body">
+            <h3>Distribuidora San Pio-Coadministrador</h3>
+            <p>Durante 11 años en Distribuidora San Pio adquirí una amplia experiencia en la gestión integral de un local comercial, incluyendo atención al cliente, control de inventarios físicos y digitales, manejo de caja, coordinación con proveedores y supervisión de productos. Además, brindé soporte técnico interno de hardware y software, contribuyendo al funcionamiento eficiente del negocio y a la satisfacción de los clientes.</p>
+            <div class="tags"><span>Fuerza de Ventas</span><span>Encargado de Bodega</span><span>Facturacion Electronica</span><span>Manipulacion de Alimentos</span></div>
+            <div class="tags"><span>Inventarios</span><span>Empacado</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/Django.webp" alt="Captura del Proyecto 2" loading="lazy" decoding="async" />
+          <div class="card__body">
+            <h3>SolvoSoft-Programador Web(Django)</h3>
+            <p>En Solvosoft me desempeñé como desarrollador web especializado en Django y PostgreSQL, participando en la creación, mejora y mantenimiento de aplicaciones web para diversos clientes. Mi trabajo incluyó optimizar el rendimiento de los sistemas, implementar nuevas funcionalidades y garantizar su correcto funcionamiento, siempre manteniendo buenas prácticas de programación y un enfoque en la experiencia del usuario.</p>
+            <div class="tags"><span>Python</span><span>Django</span><span>JavaScript</span><span>HTML</span><span>CSS</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contacto" class="container section">
+      <h2>Contacto</h2>
+      <p>¿Hablamos? Escríbeme por correo o redes.</p>
+      <ul class="contact">
+        <li>📧 <a href="mailto:gary21mendoza12@gmail.com">gary21mendoza12@gmail.com</a></li>
+        <li>🐙 <a href="https://github.com/gary21mendoza12" target="_blank" rel="noopener">github.com/gary21mendoza12</a></li>
+        <p>📧Linkedin: linkedin.com/in/gary-ryan-mendoza-quiros-6b37552ba</p></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container foot__wrap">
+      <small>© <span id="year"></span> Gary Mendoza Quiros.</small>
+      <a class="top" href="#contenido" aria-label="Subir al inicio">↑ Arriba</a>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

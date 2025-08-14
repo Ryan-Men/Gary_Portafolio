@@ -1,0 +1,115 @@
+/* ==== Variables y resets ==== */
+:root{
+  --bg:#0f0f0f;
+  --surface:#161616;
+  --text:#e9e9e9;
+  --muted:#b3b3b3;
+  --accent:#3f9cff;
+  --border:#262626;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  text-rendering: optimizeLegibility;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.skip{position:absolute;left:-9999px;top:auto}
+.skip:focus{left:1rem;top:1rem;background:var(--surface);padding:.5rem .75rem;border-radius:.5rem}
+
+.container{max-width:1100px;margin-inline:auto;padding-inline:1rem}
+.section{padding:3rem 0}
+.accent{color:var(--accent)}
+.lead{color:var(--muted);font-size:1.1rem}
+
+.btn{
+  display:inline-block;
+  border:1px solid var(--border);
+  padding:.75rem 1rem;
+  border-radius:.75rem;
+  background:var(--surface);
+  color:var(--text);
+  text-decoration:none;
+  transition:transform .15s ease, background .2s ease, border-color .2s ease;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn.primary{background:var(--accent); color:#111; border-color:transparent}
+.btn.ghost{background:transparent}
+.btn.small{padding:.5rem .75rem; font-size:.9rem}
+
+/* ==== Nav ==== */
+.nav{
+  position:sticky; top:0; z-index:10;
+  background:color-mix(in oklab, var(--bg), #000 20%);
+  border-bottom:1px solid var(--border);
+  backdrop-filter: blur(8px);
+}
+.nav__wrap{
+  display:flex; align-items:center; justify-content:space-between; height:64px;
+}
+.brand{font-weight:700; letter-spacing:.5px}
+.brand span{color:var(--accent)}
+.menu{display:flex; gap:1rem; align-items:center}
+
+/* ==== Hero ==== */
+.hero{
+  display:grid; grid-template-columns: 1.15fr .85fr; gap:2rem;
+  align-items:center; min-height: clamp(420px, 60vh, 720px);
+}
+.hero__text h1{font-size: clamp(2rem, 4vw, 3rem); margin:0 0 .5rem}
+.cta{display:flex; gap:1rem; margin-top:1rem}
+.hero__media img{border-radius:1.25rem; border:1px solid var(--border); background:#121212}
+
+/* ==== Badges ==== */
+.badges{display:flex; gap:.5rem; flex-wrap:wrap; padding:0; list-style:none; margin-top:1rem}
+.badges li{background:var(--surface); border:1px solid var(--border); padding:.4rem .65rem; border-radius:999px; color:var(--muted)}
+
+/* ==== Grid Proyectos ==== */
+.grid{
+  display:grid; gap:1.25rem;
+  grid-template-columns: repeat(12, 1fr);
+}
+.card{
+  grid-column: span 12;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:1rem; overflow:hidden;
+  display:flex; flex-direction:column;
+}
+.card__body{padding:1rem}
+.card h3{margin:.25rem 0 .5rem}
+.tags{display:flex; gap:.5rem; margin:.5rem 0 1rem}
+.tags span{font-size:.85rem; color:var(--muted); border:1px dashed var(--border); padding:.25rem .5rem; border-radius:.5rem}
+.actions{display:flex; gap:.5rem}
+
+@media (min-width: 720px){
+  .card{grid-column: span 6}
+}
+@media (min-width: 980px){
+  .card{grid-column: span 4}
+}
+
+/* ==== Contacto ==== */
+.contact{list-style:none; padding:0; margin:1rem 0; display:grid; gap:.5rem}
+
+/* ==== Footer ==== */
+.footer{
+  border-top:1px solid var(--border);
+  padding:1rem 0;
+  background:#0d0d0d;
+}
+.foot__wrap{display:flex; align-items:center; justify-content:space-between; gap:1rem}
+.top{border:1px solid var(--border); padding:.4rem .6rem; border-radius:.5rem}
+
+/* ==== Motion reduce ==== */
+@media (prefers-reduced-motion: reduce){
+  .btn{transition:none}
+}
